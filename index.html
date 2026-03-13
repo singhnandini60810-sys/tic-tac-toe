@@ -20,20 +20,9 @@ body{
     background:white;
     padding:25px;
     border-radius:15px;
-    width:340px;
+    width:350px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-h1{
-    margin-bottom:5px;
-}
-
-.scoreboard{
-    display:flex;
-    justify-content:space-between;
-    margin:10px 0;
-    font-weight:bold;
 }
 
 .board{
@@ -81,6 +70,19 @@ button{
     color:white;
 }
 
+select{
+    padding:8px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+.scoreboard{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-weight:bold;
+}
+
 #status{
     font-size:18px;
     margin-top:10px;
@@ -93,7 +95,12 @@ button{
 
 <div class="container">
 
-<h1>Tic Tac Toe</h1>
+<h2>Tic Tac Toe</h2>
+
+<select id="mode">
+<option value="pvp">Player vs Player</option>
+<option value="ai">Player vs Computer</option>
+</select>
 
 <div class="scoreboard">
 <div>X Score: <span id="xScore">0</span></div>
@@ -102,7 +109,7 @@ button{
 
 <div id="status">Press Start</div>
 
-<div class="board" id="board">
+<div class="board">
 
 <button class="cell" onclick="play(0)"></button>
 <button class="cell" onclick="play(1)"></button>
@@ -128,10 +135,11 @@ button{
 let board=["","","","","","","","",""];
 let currentPlayer="X";
 let gameActive=false;
-let vsComputer=true;
 
 let xScore=0;
 let oScore=0;
+
+let vsComputer=false;
 
 const winPatterns=[
 [0,1,2],
@@ -145,6 +153,10 @@ const winPatterns=[
 ];
 
 function startGame(){
+
+let mode=document.getElementById("mode").value;
+
+vsComputer = mode==="ai";
 
 gameActive=true;
 document.getElementById("status").innerText="Player X Turn";
@@ -161,8 +173,10 @@ if(checkWin(currentPlayer)){
 
 updateScore(currentPlayer);
 highlightWin(currentPlayer);
+
 document.getElementById("status").innerText=currentPlayer+" Wins!";
 gameActive=false;
+
 return;
 
 }
