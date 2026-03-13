@@ -1,31 +1,64 @@
-# tic-tac-toe
-Kids-friendly Tic Tac Toe game built with HTML, CSS &amp; JavaScript featuring colorful UI, start/play again buttons, and win/draw screens.
-# Tic Tac Toe for Kids
+# Tic Tac Toe Web Game
 
-A fun and colorful **Tic Tac Toe game** designed especially for children.  
-Built using **HTML, CSS, and JavaScript** with a simple and friendly user interface.
+A simple and interactive Tic Tac Toe game built using **HTML, CSS, and JavaScript**.
+The game allows players to either compete against another player or play against a computer opponent.
 
 ## Features
--  Bright, child-friendly colors
--  Start Game button
--  Play Again button
--  Winning screen
--  Draw screen
--  Responsive and easy to play
+
+* Player vs Player mode
+* Player vs Computer mode
+* Score tracking for both players
+* Highlighting of winning cells
+* Restart game option
+* Clean and responsive user interface
+* Deployed using GitHub Pages
+
+## How to Play
+
+1. Open the game in your browser.
+2. Select a game mode:
+
+   * Player vs Player
+   * Player vs Computer
+3. Click **Start Game**.
+4. Players take turns placing **X** and **O** on the board.
+5. The first player to align three marks in a row (horizontal, vertical, or diagonal) wins the game.
+6. Click **Restart** to reset the board and play again.
 
 ## Technologies Used
-- HTML
-- CSS
-- JavaScript
 
-## How to Run
-1. Download or clone this repository
-2. Open `tic_tac_toe_kids.html` in any web browser
-3. Click **Start Game** and enjoy!
+* HTML
+* CSS
+* JavaScript
 
-## Purpose
-This project was created for learning and practicing **basic web development** and **JavaScript game logic**.
+## Project Structure
 
----
+```
+tic-tac-toe/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
 
-If you like this project, don’t forget to star the repository!
+## Live Demo
+
+You can play the game here:
+
+https://singhnandini60810-sys.github.io/tic-tac-toe/
+
+## Future Improvements
+
+Possible enhancements for this project include:
+
+* Improved AI with difficulty levels
+* Animated winning line
+* Sound effects
+* Dark mode
+* Mobile optimization
+* Player name input
+
+## License
+
+This project is open source and available under the MIT License.
